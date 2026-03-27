@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://newspaper-portfolio-blog-template.vercel.app"),
   title: {
     default: "The Ohara Chronicle — Nico Robin",
     template: "%s — The Ohara Chronicle",
