@@ -2,7 +2,7 @@
 
 A newspaper-style blog portfolio template built with [newspapercn-ui](https://newspapercn-ui.vercel.app), a One Piece themed shadcn/ui variant library.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pyaephyowinn/newspaper-portfolio-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pyaephyowinn/newspaper-portfolio-blog-template)
 
 ## Features
 
@@ -59,7 +59,7 @@ This template is designed to be easily customized:
 
 ## Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pyaephyowinn/newspaper-portfolio-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pyaephyowinn/newspaper-portfolio-blog-template)
 
 ## License
 
