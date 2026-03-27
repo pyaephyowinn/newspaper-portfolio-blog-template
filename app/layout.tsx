@@ -28,9 +28,18 @@ export const metadata: Metadata = {
       "A newspaper-style blog portfolio built with newspapercn-ui — a One Piece themed shadcn/ui variant library.",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "The Ohara Chronicle — Newspaper Portfolio Blog Template",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og-image.png"],
   },
 };
 
