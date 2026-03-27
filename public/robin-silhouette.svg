@@ -1,0 +1,8 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#c4a882"/>
+  <circle cx="100" cy="55" r="32" fill="#4a3d2e" opacity="0.65"/>
+  <ellipse cx="100" cy="130" rx="45" ry="55" fill="#4a3d2e" opacity="0.55"/>
+  <!-- Hair suggestion -->
+  <ellipse cx="100" cy="50" rx="38" ry="35" fill="#4a3d2e" opacity="0.35"/>
+  <text x="100" y="190" text-anchor="middle" font-size="9" fill="#4a3d2e" opacity="0.5" font-family="serif">[Photo]</text>
+</svg>
