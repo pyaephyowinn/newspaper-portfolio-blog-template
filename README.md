@@ -1,5 +1,7 @@
 # The Ohara Chronicle — Newspaper Portfolio Blog Template
 
+![The Ohara Chronicle](public/preview-image.png)
+
 A newspaper-style blog portfolio template built with [newspapercn-ui](https://newspapercn-ui.vercel.app), a One Piece themed shadcn/ui variant library.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pyaephyowinn/newspaper-portfolio-blog-template)
