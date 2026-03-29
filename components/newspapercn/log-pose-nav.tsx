@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 interface LogPoseNavItem {
@@ -64,7 +65,7 @@ const LogPoseNav = React.forwardRef<HTMLElement, LogPoseNavProps>(
               const y = 50 + radius * Math.sin(angle);
 
               return (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
@@ -77,7 +78,7 @@ const LogPoseNav = React.forwardRef<HTMLElement, LogPoseNavProps>(
                   title={item.label}
                 >
                   {item.label.slice(0, 2)}
-                </a>
+                </Link>
               );
             })}
 
@@ -107,7 +108,7 @@ const LogPoseNav = React.forwardRef<HTMLElement, LogPoseNavProps>(
       >
         {items.map((item, i) => (
           <React.Fragment key={item.href}>
-            <a
+            <Link
               href={item.href}
               className={cn(
                 "relative px-3 py-1.5 transition-all rounded-sm",
@@ -120,7 +121,7 @@ const LogPoseNav = React.forwardRef<HTMLElement, LogPoseNavProps>(
                 <CompassNeedle className="absolute -top-3 left-1/2 h-3 w-3 -translate-x-1/2 text-accent" />
               )}
               {item.label}
-            </a>
+            </Link>
             {i < items.length - 1 && (
               <span className="text-muted-foreground/40 select-none">→</span>
             )}

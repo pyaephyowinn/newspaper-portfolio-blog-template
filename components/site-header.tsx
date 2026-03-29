@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Masthead } from "@/components/newspapercn/masthead";
 import { LogPoseNav } from "@/components/newspapercn/log-pose-nav";
 import { ThemeToggle } from "@/components/newspapercn/theme-toggle";
@@ -18,12 +19,17 @@ const navItems = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
 
   const items = navItems.map((item) => ({
     ...item,
@@ -64,10 +70,40 @@ export function SiteHeader() {
                 The Ohara Chronicle
               </Link>
             )}
-            <LogPoseNav items={items} variant="linear" />
+            {/* Desktop nav */}
+            <LogPoseNav items={items} variant="linear" className="hidden md:flex" />
           </div>
-          <ThemeToggle size="sm" />
+          <div className="flex items-center gap-2">
+            <ThemeToggle size="sm" />
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden p-1.5 rounded-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            >
+              {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile dropdown */}
+        {mobileOpen && (
+          <nav className="md:hidden border-t border-border/50 py-2">
+            {items.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`block px-3 py-2 font-serif text-sm rounded-sm transition-colors ${
+                  item.active
+                    ? "bg-primary text-primary-foreground font-bold"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        )}
       </div>
       {!scrolled && <Separator variant="thick" />}
     </header>
